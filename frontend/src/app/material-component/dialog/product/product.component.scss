@@ -1,0 +1,32 @@
+.mat-toolbar{
+    margin: -24px;
+    width: auto;
+    margin-bottom: 10px;
+    // background: #4C3935;
+    background: #F16341;
+    color:    #F7F1E9;
+    font-family:"Montserrat", sans-serif;
+    font-weight: bold;
+  
+  
+  }
+
+
+  .mat-raised-button
+  {
+    // background: #4C3935;
+    background: #F16341;
+    color:    #F7F1E9;
+  }
+  
+  
+  .title-center{
+      flex : 1 1 auto;
+      text-align: center;
+  }
+  
+  mat-form-field{
+      padding: 5px ;
+  }
+  
+  

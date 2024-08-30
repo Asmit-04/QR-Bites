@@ -1,0 +1,10 @@
+/* sidebar.component.css or sidebar.component.scss */
+.sidebar {
+  background-color: #F7F1E9; /* Set your desired background color */
+  padding: 16px; /* Optional: Add padding if needed */
+  height: 100%; /* Ensure it takes up full height */
+}
+
+.sidebar mat-nav-list {
+  background-color: inherit; /* Make sure mat-nav-list inherits the background color */
+}/*# sourceMappingURL=sidebar.component.css.map */

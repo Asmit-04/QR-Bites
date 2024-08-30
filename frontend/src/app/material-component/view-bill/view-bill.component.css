@@ -1,0 +1,41 @@
+mat-card {
+  padding: 20px;
+}
+
+.mat-icon-button {
+  color: #c23030;
+}
+
+table {
+  width: 100%;
+}
+
+.heading mat-card {
+  background-color: #4C3935;
+}
+
+.heading span {
+  font-family: "Caveat", cursive;
+  color: #F16341;
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.heading-2 mat-card {
+  background-color: #F7F1E9;
+}
+
+.category-section {
+  margin-bottom: 20px; /* Adjust spacing between category sections */
+  border: 1px solid #ccc; /* Example border style for the entire category section */
+  padding: 10px; /* Adjust padding as needed */
+  padding-bottom: 20px;
+  background-color: #F7F1E9;
+}
+
+.category-section p {
+  color: #4C3935;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}/*# sourceMappingURL=view-bill.component.css.map */

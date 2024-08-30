@@ -1,0 +1,13 @@
+
+
+  <mat-nav-list id="snav">
+    <ng-container *ngFor="let menuItem of filteredMenuItems">
+      <mat-list-item class="sidebar-item" routerLinkActive="selected">
+        <a [routerLink]="['/cafe', menuItem.state]">
+          <mat-icon>{{menuItem.icon}}</mat-icon>
+          <span>{{menuItem.name}}</span>
+        </a>
+      </mat-list-item>
+    </ng-container>
+  </mat-nav-list>
+  

@@ -1,0 +1,49 @@
+
+
+
+.mat-toolbar{
+  margin: -24px;
+  width: auto;
+  margin-bottom: 10px;
+  background: #F16341;
+  color:    #F7F1E9;
+  font-family:"Montserrat", sans-serif;
+  
+}
+
+.mat-raised-button
+{
+  background: #F16341;
+  color:    #F7F1E9;
+}
+
+.title-center{
+    flex : 1 1 auto;
+    text-align: center;
+}
+
+mat-form-field{
+    padding: 5px ;
+}
+
+.forgot-password-link {
+  text-align: center; /* Center horizontally */
+  margin-top: 35px; /* Space from the buttons */
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.forgot-password-link a {
+
+  text-decoration: none;
+  color: #007bff;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+

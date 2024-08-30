@@ -1,0 +1,83 @@
+mat-card{
+    padding: 20px;
+}
+
+table{
+    width: 100%;
+}
+
+
+  .float-right{
+    float: right;
+}
+
+
+
+.heading mat-card
+{
+  background-color: #4C3935;
+  // background: #fff;
+
+}
+
+.heading span
+{
+  // background-color: #4C3935;
+  font-family: "Caveat", cursive;
+  color: #F16341;
+  font-weight: 700;
+    font-size: 45px;
+  // font-size : 20px ;
+}
+
+.heading button
+  {
+    // background:  #F16341;
+    // color: #F7F1E9;
+
+    background-color:#F16341;
+    color: #F7F1E9;
+    font-family:"Montserrat", sans-serif;
+   
+    font-weight: bold;
+  }
+
+
+  .heading-2 mat-card
+  {
+    
+    background-color:    #F7F1E9;
+  }
+
+  .category-section {
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    padding-bottom: 20px;
+    background-color: #F7F1E9;
+ 
+  }
+  
+  .category-section p
+{
+  color: #4C3935;
+  font-size: 15px;
+  font-family:"Montserrat", sans-serif;
+  font-weight: bold;
+
+
+}
+
+
+
+.mat-icon-button{
+  color:  #F16341;
+  margin-left: 4px;
+ 
+}
+
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar .mat-slide-toggle-thumb{
+  // background-color: #c23030 ;
+  background-color:  #F16341;
+}

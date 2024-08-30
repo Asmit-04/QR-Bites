@@ -1,0 +1,22 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  

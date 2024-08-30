@@ -1,0 +1,78 @@
+.rounded-carousel-image {
+  border-radius: 15px; /* Adjust the value as needed for desired roundness */
+  margin-bottom: 30px; /* Adjust the value for desired margin at the bottom */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 20px;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #F7F1E9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center; /* Align items vertically center */
+}
+
+.image-container {
+  max-width: 30%; /* Adjust the width to control the size of the image container */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  border-radius: 15px;
+}
+
+.text-container {
+  max-width: 70%; /* Adjust the width to control the size of the text container */
+  margin-left: 20px; /* Add space between the image and text */
+}
+
+.text-container h2 {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 50px;
+  color: #FF6347; /* Adjust as needed */
+}
+
+.text-container p {
+  font-family: "Montserrat", sans-serif; /* Adjust as needed */
+  font-weight: 500;
+  color: #333; /* Adjust as needed */
+  line-height: 1.6;
+}
+
+.read-more-btn {
+  background-color: #008CBA; /* Adjust as needed */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Your Font Family", sans-serif; /* Adjust as needed */
+  font-size: 16px;
+}
+
+.read-more-btn:hover {
+  background-color: #005f73; /* Adjust as needed */
+}
+
+.color-brown {
+  color: #4C3935;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Hobeaux-Bold;
+}
+
+.mid-text {
+  padding: 30px;
+}/*# sourceMappingURL=user-dashboard.component.css.map */

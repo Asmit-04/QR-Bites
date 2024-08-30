@@ -1,0 +1,52 @@
+mat-form-field {
+  padding: 5px;
+}
+
+.float-right {
+  float: right;
+}
+
+.mat-icon-button {
+  color: #c23030;
+}
+
+table {
+  width: 100%;
+}
+
+mat-card {
+  padding-bottom: 30px !important;
+}
+
+.heading mat-card {
+  background-color: #4C3935;
+}
+
+.heading span {
+  font-family: "Caveat", cursive;
+  color: #F16341;
+  font-weight: 700;
+  font-size: 45px;
+  margin-top: 20px;
+}
+
+.heading button {
+  background-color: #F7F1E9;
+  color: #4C3935;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.category-section {
+  background-color: #F7F1E9;
+}
+
+.category-section mat-card {
+  background-color: #F7F1E9;
+}
+
+.category-section button {
+  background-color: #4C3935;
+  color: #F7F1E9;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=manage-order.component.css.map */

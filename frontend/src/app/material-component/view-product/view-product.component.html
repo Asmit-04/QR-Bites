@@ -1,0 +1,99 @@
+
+
+  <!-- newwwww -->
+
+
+
+  <div class="responsive_table">
+    <div class="heading">
+     <mat-card>
+       <b><span>Our Menu🍴 </span></b>
+       <!-- <button mat-flat-button class="float-right" [routerLink]="['/cafe/order']">See Your Order</button> -->
+      </mat-card>
+     </div>
+   </div>
+   
+   
+       <hr>
+   
+    
+   
+     <!-- <div class="container"> -->
+       <div class="responsive_table">
+         <table  class="mat-elevation-z8">
+   
+       <div *ngIf="noActiveProducts; else showProducts" class="no-products">
+         <p>OPPS YOUR MENU IS EMPTY!!!. </p>
+         <hr>
+         <p>Please activate your menu items from product's section to display them here.</p>
+       </div>
+       
+       <ng-template #showProducts>
+         <div *ngFor="let category of categories" class="category-section">
+           <h1>{{ category }}</h1>
+           <table mat-table [dataSource]="getProductsByCategory(category)" class="mat-elevation-z8">
+             <!-- Name Column -->
+             <ng-container matColumnDef="name">
+               <th mat-header-cell *matHeaderCellDef class="name-column">Name</th>
+               <td mat-cell *matCellDef="let product" class="name-column"><p>{{ product.name }}</p></td>
+             </ng-container>
+     
+             <!-- Description Column -->
+             <ng-container matColumnDef="description">
+               <th mat-header-cell *matHeaderCellDef class="description-column">Description</th>
+               <td mat-cell *matCellDef="let product"><p class="description-column">{{ product.description }}</p></td>
+             </ng-container>
+   
+             <ng-container matColumnDef="price">
+               <th mat-header-cell *matHeaderCellDef class="price-column">Price</th>
+               <td mat-cell *matCellDef="let product" class="price-column">
+                 <p class="price-color">₹ {{ product.price }}</p>
+               </td>
+             </ng-container>
+             
+   
+     
+             <!-- Price Column -->
+             <!-- <ng-container matColumnDef="price">
+               <th mat-header-cell *matHeaderCellDef>Price</th>
+               <td mat-cell *matCellDef="let product"><p class="price-color">₹ {{ product.price }}</p></td>
+             </ng-container>
+      -->
+   
+             
+             <!-- action Column -->
+             <ng-container matColumnDef="edit">
+               <th mat-header-cell *matHeaderCellDef class="action-column">Action</th>
+               <td mat-cell *matCellDef="let product" class="action-column">
+                  <button mat-raised-button color="accent" (click)="addToOrder(product)">   <!----i have only this button and the method to hand it -->
+                   Add to Order
+                 </button>
+               </ng-container>
+   
+   
+             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+             <tr mat-row *matRowDef="let product; columns: displayedColumns"></tr>
+           </table>
+         </div>
+    
+       </ng-template> 
+     </table>
+     </div>
+   
+     <hr>
+   
+    
+      <div class="fixed-menu-header-2">
+       <div class="responsive_table">
+         <div class="heading-3">
+           <mat-card class="full-width-card">
+             <!-- Add a matBadge to the button -->
+             <button mat-flat-button class="float-center" [routerLink]="['/cafe/order']" 
+                     matBadge="{{ orderItems.length }}" matBadgeColor="accent" matBadgePosition="above after">
+               See Your Order
+             </button>
+           </mat-card>
+         </div>
+       </div>
+     </div>
+     

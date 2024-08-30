@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+       
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #2980b9;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            font-size: 18px;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tfoot tr {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        .total {
+            text-align: right;
+            padding: 10px 0;
+        }
+        .thank-you {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Cafe Management System</h3>
+        
+        <table>
+            <tr>
+                <th>Name: <%= name %></th>
+                <% if (email) { %>
+                    <th>Email: <%= email %></th>
+                <% } %>
+            </tr>
+            <tr>
+                <% if (contactNumber) { %>
+                    <th>Contact Number: <%= contactNumber %></th>
+                <% } %>
+                <th>Payment Method: Pay Later at the Counter</th>
+            </tr>
+            <tr>
+                <th>Your Table Number: <%= tableId %></th>
+            </tr>
+            <tr>
+                <th colspan="2">Date & Time: <span id="dateTime"></span></th>
+            </tr>
+        </table>
+        
+        <h3>Your Order:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Sub Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (productDetails.length > 0) { %>
+                    <% productDetails.forEach(product => { %>
+                        <tr>
+                            <td><%= product.name %></td>
+                            <td><%= product.quantity %></td>
+                            <td><%= product.price %></td>
+                            <td><%= product.total %></td>
+                        </tr>
+                    <% }); %>
+                <% } %>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="total">Total:</td>
+                    <td><%= totalAmount %> ₹</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="total">Amount Due:</td>
+                    <td><%= totalAmount %> ₹</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <div class="thank-you">
+            <h3>Thank you for Ordering. Your order is on the way! Please pay at the counter when you're ready.</h3>
+        </div>
+    </div>
+
+    <script>
+        // Get current date and time
+        const now = new Date();
+        const formattedDateTime = now.toLocaleString();
+        document.getElementById('dateTime').innerText = formattedDateTime;
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+ <div class="heading">
+<mat-card>
+    <b><span>View Orders</span></b>
+</mat-card>
+</div>
+<hr>
+
+<div class="heading-2">
+<mat-card>
+    <mat-form-field appearance="fill">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" #input>
+          </mat-form-field>
+      </mat-card>
+    </div>
+      <hr>
+
+      
+<div class="responsive_table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 category-section">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element"><p>{{element.name}}</p></td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element"><p>{{element.email}}</p></td>
+    </ng-container>
+   
+    <ng-container matColumnDef="contactNumber">
+        <th mat-header-cell *matHeaderCellDef>Contact Number</th>
+        <td mat-cell *matCellDef="let element"><p>{{element.contactNumber}}</p></td>
+    </ng-container>
+  
+    <!-- <ng-container matColumnDef="paymentMethod">
+        <th mat-header-cell *matHeaderCellDef>Payment Method</th>
+        <td mat-cell *matCellDef="let element"><p>{{element.paymentMethod}}</p></td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>Total</th>
+        <td mat-cell *matCellDef="let element"><p>₹ {{element.total}}</p></td>
+    </ng-container>
+
+    <ng-container matColumnDef="view">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element" class="action-link">
+         
+            <button mat-icon-button color="primary" matTooltip="view" (click)="handleViewAction(element)">
+          <mat-icon>visibility</mat-icon>        
+        </button>
+
+        <button mat-icon-button color="primary" matTooltip="download Bill" (click)="downloadReportAction(element)">
+            <mat-icon>summarize</mat-icon>        
+          </button>
+
+          <button mat-icon-button color="primary" matTooltip="Delete" (click)="handleDeleteAction(element)">
+            <mat-icon>delete</mat-icon>        
+          </button>
+    
+        </td>
+      </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let element">
+                <mat-checkbox (change)="onChange($event.checked, element.id)" 
+                              matTooltip="Mark As Done" 
+                              [checked]="element.status === 'done'">
+                </mat-checkbox>
+              </td>
+            </ng-container>
+        
+       
+
+<!-- <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr> -->
+<!-- <tr mat-row *matRowDef="let row; columns:displayedColumns;"></tr> -->
+
+<!-- Header row -->
+<tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+
+<!-- Data rows with conditional styling -->
+<tr mat-row *matRowDef="let row; columns: displayedColumns; when: isDone"
+    [ngClass]="{'done-row': row.status === 'done'}">
+</tr>
+
+
+</table>
+</div> 
+
